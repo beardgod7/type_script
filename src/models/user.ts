@@ -19,6 +19,7 @@ class user extends Model<TaskAttributes, TaskCreationAttributes> implements Task
   public password!: string;
   public gender!:string;
   public createdAt!: Date;
+  comparePassword!: (password: any) => Promise<boolean>;
 }
 
 user.init({
